@@ -1,0 +1,385 @@
+/*Body*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Map */
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Sidebar */
+
+.sideba {
+    border-style: groove;
+    border-width: 1px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    border-radius: 15px;
+    width: 20em;
+    border-color: rgb(122, 193, 235);
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    z-index: 1;
+    height: 480px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    position: fixed;
+    top: 130px;
+    right: 10px;
+}
+
+
+/* Testing */
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+td,
+th {
+    border: 1px solid #a6deff;
+    text-align: left;
+    font-size: 12px;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #b8e2fa;
+}
+
+
+/* Input checkbox and radiobutton */
+
+input.layer[type="radio"] {
+    width: 1em;
+    height: 1em;
+}
+
+input.layer[type="checkbox"] {
+    width: 1em;
+    height: 1em;
+}
+
+
+/* Sidebar Button */
+
+.button-map {
+    background-color: #3c8dbc;
+    /* Green */
+    color: white;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    padding: 7px 15px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 130px;
+    right: 5px;
+    opacity: 0.8;
+    border-radius: 8px;
+}
+
+.button-map:hover {
+    background-color: white;
+    color: #3c8dbc;
+}
+
+
+/*
+ul.below_navbar_map {
+    z-index: 4;
+    list-style-type: none;
+    margin: 0;
+    margin-left: 200px;
+    height: 5vh;
+    position: fixed;
+    overflow: hidden;
+    top: 55px;
+    margin-left: 200px;
+}
+
+button.below_navbar_map {
+    z-index: 4;
+    width: 80px;
+    float: left;
+}
+*/
+
+
+/* Overlay Popup */
+
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 280px;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+.ol-popup-closer:after {
+    /* content: "✖"; */
+	font-weight: 800;
+    content: "×";
+}
+
+
+/* Navigation Bar */
+
+#navbar_map {
+    z-index: 3;
+    list-style-type: none;
+    height: 5.4vh;
+    border-radius: 6px;
+    margin-top: 0.5vh;
+    margin-left: 5vw;
+    margin-right: 1vw;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(129, 194, 238);
+    border-top: 1px solid rgb(129, 194, 238);
+}
+
+
+/*
+li.navbar_map {
+    z-index: 2;
+    width: 80px;
+    float: right;
+    border-left: 1px solid #bbb;
+}
+
+li a.navbar_map {
+    z-index: 2;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+li a.navbar_map:hover:not(.active) {
+    z-index: 2;
+
+    background-color: #366d92;
+}
+
+.active {
+    z-index: 2;
+    background-color: #366d92;
+} */
+
+
+/* Layer Slider */
+
+.layer_slidecontainer {
+    width: 100%;
+}
+
+.layer_slider {
+    -webkit-appearance: none;
+    width: 95%;
+    height: 5px;
+    border-radius: 15px;
+    background: #a8ebff;
+    outline: none;
+    opacity: 0.6;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.layer_slider:hover {
+    opacity: 1;
+}
+
+.layer_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50px;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #2287fc;
+    cursor: pointer;
+}
+
+.layer_slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #2287fc;
+    cursor: pointer;
+}
+
+
+/* Openlayer Components */
+
+.ol-full-screen {
+    color: white;
+    font-size: 25px;
+    transition-duration: 0.4s;
+    /* display: block; */
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    left: 130px;
+    border-radius: 8px;
+}
+
+.ol-attribution {
+    bottom: 57px;
+    width: fit-content;
+    height: fit-content;
+    right: 15px;
+    font-size: 20px;
+}
+
+.ol-overviewmap {
+    bottom: 57px;
+    left: 90px;
+    font-size: 25px;
+    display: inline;
+}
+
+.ol-rotate {
+    top: 300px;
+    font-size: 25px;
+}
+
+
+/* Special for calculation of area and length */
+
+.ol-tooltip {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+    opacity: 0.7;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.ol-zoomslider {
+    background-color: #b0d3eb;
+    left: 90px;
+}
+
+.ol-zoom {
+    left: 90px;
+}
+
+.ol-tooltip-measure {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.ol-tooltip-static {
+    background-color: #ffcc33;
+    color: black;
+    border: 1px solid white;
+}
+
+.ol-tooltip-measure:before,
+.ol-tooltip-static:before {
+    border-top: 6px solid rgba(0, 0, 0, 0.5);
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    margin-left: -7px;
+    left: 50%;
+}
+
+.ol-tooltip-static:before {
+    border-top-color: #ffcc33;
+}
+
+
+/* Navbar and map Container */
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 7vh 6.2vh 86.8vh;
+    grid-template-columns: 100vw;
+}
+
+
+/* Scroll Bar for right side floating menu I guess*/
+
+
+/* width */
+
+.map_scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+.map_scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(153, 153, 153);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+
+/* Handle */
+
+.map_scroll::-webkit-scrollbar-thumb {
+    background: #77c2f3;
+    border-radius: 50px;
+    height: 5px;
+}
+
+
+/* Handle on hover */
+
+.map_scroll::-webkit-scrollbar-thumb:hover {
+    background: #409fdf;
+}

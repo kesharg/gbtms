@@ -1,0 +1,40 @@
+@extends('layouts.home')
+
+
+@section('content')
+
+
+<div class="card mb-5">
+    <div class="card-header">
+        <h2>User Information</h2>
+    </div>
+    <div class="card-body">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Name:</strong>
+                {{ $user->name }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Email:</strong>
+                {{ $user->email }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Roles:</strong>
+                @if(!empty($user->getRoleNames()))
+                @foreach($user->getRoleNames() as $v)
+                <label class="badge badge-success">{{ $v }}</label>
+                @endforeach
+                @endif
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <a class="btn btn-primary" href="{{ route('users.index') }}"> &nbsp; Back &nbsp;</a>
+        </div>
+    </div>
+</div>
+@include('empty.space')
+@endsection

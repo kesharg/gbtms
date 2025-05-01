@@ -1,0 +1,22 @@
+
+<!--*************COPY OF OPERATOR !! NOT USED RIGHT NOW !! MAY NEED UPDATES*****************-->
+
+<div id="confirmModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="title_data">Confirmation</h2>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+            </div>
+
+            <div class="modal-body">
+                <h4 align="center" id="body_data">Are you sure you want to remove this data?</h4>
+            </div>
+            <div class="form-group" align="center" style="margin: 30px;">
+                <button type=" button" name="ok_button" id="ok_delete" class="btn btn-danger"> Delete</button>
+                <button type="button" class="btn btn-primary" id="cancel_delete" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

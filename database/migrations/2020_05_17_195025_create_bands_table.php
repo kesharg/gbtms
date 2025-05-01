@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateBandsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('bands', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
+
+            $table->string('band_code', 20)->nullable();
+            $table->string('band_name', 20)->nullable();
+            $table->string('band_category', 20)->nullable();
+            $table->string('tx_rx_frequency', 20)->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('bands');
+    }
+}
