@@ -67,3 +67,4 @@ Push code
 git push -u origin master
 ```
 
+Database backup file : https://drive.google.com/file/d/1CGO0WXQEqsDirVhNvfrpqwFT7kacm3rb/view?usp=sharing
